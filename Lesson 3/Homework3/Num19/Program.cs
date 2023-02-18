@@ -3,5 +3,20 @@
 // оно палиндромом.
 
 System.Console.WriteLine("Введите пятизначное число");
-int n = Convert.ToInt32(Console.ReadLine());
-int [] numbers = {n};
+string num = Console.ReadLine();
+
+if(num.Length == 5 && num[0] == num[4] && num[1] == num[3])
+{
+    System.Console.WriteLine("Число является палиндромом");
+}
+else if (num.Length == 5 && num[0] != num[4] && num[1] != num[3])
+{
+    System.Console.WriteLine("Число не является палиндромом");
+}
+else
+{
+    System.Console.WriteLine("Число не является пятизначным. Пожалуйста, введите пятизначное число");
+}
+
+
+
