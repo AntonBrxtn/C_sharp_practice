@@ -3,12 +3,10 @@
 // 3, 5 -> 243 (3⁵)
 // 2, 4 -> 16
 
-int Request(string text)
+int GetNumber(string text)
 {
-    System.Console.Write(text);
-    string readInput = System.Console.ReadLine();
-    int result = int.Parse(readInput);
-    return result;
+    System.Console.WriteLine(text);
+    return Convert.ToInt32(Console.ReadLine());
 }
 
 int Base (int A, int B)
@@ -31,8 +29,8 @@ bool CheckNumber (int B)
     return true;
 }
 
-int A = Request("Введите число A: ");
-int B = Request("Введите число B: ");
+int A = GetNumber("Введите число A: ");
+int B = GetNumber("Введите число B: ");
 if (CheckNumber(B))
 {
     System.Console.WriteLine($"Число {A} в степени {B} равно {Base(A, B)}");
